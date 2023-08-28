@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .ring {
+      width: 200px;
+      height: 200px;
+      border: 8px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .ring:nth-child(1) {
+      border-bottom-color: rgb(255, 0, 0); /* Red */
+      animation: rotate1 2s linear infinite;
+    }
+
+    .ring:nth-child(2) {
+      border-bottom-color: rgb(0, 128, 0); /* Green */
+      animation: rotate2 2s linear infinite;
+    }
+
+    .ring:nth-child(3) {
+      border-bottom-color: rgb(0, 0, 255); /* Blue */
+      animation: rotate3 2s linear infinite;
+    }
+
+    @keyframes rotate1 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate2 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+
+    @keyframes rotate3 {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <p>Loading...</p>
+  </div>
+</body>
+</html>
